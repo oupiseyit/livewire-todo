@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Livewire Todo Application Routes
+Route::get('todo', function(){
+    return view('livewire.todo.base', []); 
+});  
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
